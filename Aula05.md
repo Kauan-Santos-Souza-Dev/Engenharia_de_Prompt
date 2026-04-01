@@ -10,7 +10,7 @@
 
 **Formato:** Carta
 
-**Exemplo:** Querido Senhor Theodore, agradeço pela coomprensão de sua carta entretanto..
+**Exemplo:** Querido Senhor Theodore, agradeço pela coomprensão de sua carta entretanto...
 
 **Limites:** Não use nenhum tipo de forma vulgar da língua , não ultrapasse o límite de 30 linhas...
 
