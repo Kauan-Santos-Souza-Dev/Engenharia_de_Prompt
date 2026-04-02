@@ -19,7 +19,7 @@ A capacidade de conversar efetivamente com sistemas de IA é o que separa os pro
 
 2- O foco está em transformar ideias em instruções eficazes que resultem em respostas úteis, criativas e confiáveis.
 
-3- Avaliar a qualidade das respostas geradas
+3- Avaliar a qualidade das respostas geradas.
 
 
 # Foco 📈
