@@ -61,7 +61,7 @@ console.log(recipes)
 ```
 
 #Laboratório: Crie um jogo de questionário
-
+```Js
 const questions = [
 {
 category: "categoria de pergunta." , 
@@ -76,4 +76,4 @@ function getRandomQuestion(questions){
    Math.floor(Math.random() * (max - min + 1)) + min;.
 }
 
-
+```
