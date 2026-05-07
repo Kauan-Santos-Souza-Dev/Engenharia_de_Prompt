@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobFlow - Agregador de Vagas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🎯 JobFlow</h1>
+            <p class="tagline">Centralize oportunidades e poupe seu tempo</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Encontre sua próxima oportunidade em um único lugar</h2>
+            <p>Chega de abrir 8 plataformas diferentes. JobFlow consolida vagas, elimina duplicatas e notifica você automaticamente.</p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="config-section" id="config">
+            <div class="container">
+                <h2>⚙️ Configure seu perfil</h2>
+                <form class="profile-form" id="profileForm">
+                    <fieldset>
+                        <legend>📋 Dados Profissionais</legend>
+                        <div class="form-group">
+                            <label for="profession">Profissão desejada *</label>
+                            <input type="text" id="profession" name="profession" placeholder="Ex: Desenvolvedor Full-Stack" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Anos de experiência *</label>
+                            <input type="number" id="experience" name="experience" min="0" max="50" placeholder="Ex: 3" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="skills">Habilidades (separadas por vírgula) *</label>
+                            <input type="text" id="skills" name="skills" placeholder="Ex: JavaScript, React, Node.js" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>🌍 Preferências</legend>
+                        <div class="form-group">
+                            <label for="location">Localização *</label>
+                            <input type="text" id="location" name="location" placeholder="Ex: São Paulo ou Remoto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="modality">Modalidade *</label>
+                            <select id="modality" name="modality" required>
+                                <option value="">Selecione</option>
+                                <option value="remoto">Remoto</option>
+                                <option value="presencial">Presencial</option>
+                                <option value="hibrido">Híbrido</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="salary">Salário mínimo (R$) *</label>
+                            <input type="number" id="salary" name="salary" min="0" placeholder="Ex: 4000" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>🔗 Plataformas</legend>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="platforms" value="linkedin" checked>
+                                LinkedIn Jobs
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="platforms" value="infojobs" checked>
+                                InfoJobs
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="platforms" value="vagas" checked>
+                                Vagas.com
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="platforms" value="gupy" checked>
+                                Gupy
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="platforms" value="99jobs" checked>
+                                99 Jobs
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="platforms" value="catho" checked>
+                                Catho
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>🔔 Notificações</legend>
+                        <div class="form-group">
+                            <label for="notificationFreq">Frequência *</label>
+                            <select id="notificationFreq" name="notificationFreq" required>
+                                <option value="">Selecione</option>
+                                <option value="realtime" selected>Em tempo real</option>
+                                <option value="diaria">Diária</option>
+                                <option value="semanal">Semanal</option>
+                            </select>
+                        </div>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="notifications" value="email" checked>
+                                📧 Email
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="notifications" value="push" checked>
+                                🔔 Push
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="btn-primary">💾 Salvar Perfil</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="vagas-section" id="vagas">
+            <div class="container">
+                <h2>💼 Vagas para você</h2>
+                
+                <div class="filters-bar">
+                    <input type="text" class="search-input" id="searchInput" placeholder="🔍 Buscar vagas...">
+                    <select class="filter-select" id="filterMatch">
+                        <option value="">Todas</option>
+                        <option value="90">90%+</option>
+                        <option value="70">70%+</option>
+                    </select>
+                </div>
+
+                <div id="vagasContainer">
+                    <article class="vaga-card">
+                        <div class="vaga-header">
+                            <div>
+                                <h3>Full-Stack Senior</h3>
+                                <p class="company">TechCorp</p>
+                                <p class="location">📍 São Paulo | Híbrido</p>
+                            </div>
+                            <span class="match-badge">92% Match</span>
+                        </div>
+                        <p class="description">Desenvolvimento com React, Node.js e banco de dados modernos.</p>
+                        <div class="vaga-details">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">TypeScript</span>
+                        </div>
+                        <div class="vaga-meta">
+                            <span class="salary">R$ 12k - 18k</span>
+                            <span class="source">LinkedIn</span>
+                        </div>
+                        <div class="vaga-actions">
+                            <button class="btn-secondary">Ver Detalhes</button>
+                            <button class="btn-primary">Candidatar</button>
+                        </div>
+                    </article>
+
+                    <article class="vaga-card">
+                        <div class="vaga-header">
+                            <div>
+                                <h3>Frontend React</h3>
+                                <p class="company">StartupX</p>
+                                <p class="location">📍 Remoto</p>
+                            </div>
+                            <span class="match-badge">87% Match</span>
+                        </div>
+                        <p class="description">Desenvolva aplicações responsivas e performáticas.</p>
+                        <div class="vaga-details">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">CSS3</span>
+                        </div>
+                        <div class="vaga-meta">
+                            <span class="salary">R$ 8k - 12k</span>
+                            <span class="source">InfoJobs</span>
+                        </div>
+                        <div class="vaga-actions">
+                            <button class="btn-secondary">Ver Detalhes</button>
+                            <button class="btn-primary">Candidatar</button>
+                        </div>
+                    </article>
+
+                    <article class="vaga-card">
+                        <div class="vaga-header">
+                            <div>
+                                <h3>Backend Node.js</h3>
+                                <p class="company">FinTech Brasil</p>
+                                <p class="location">📍 Rio de Janeiro | Presencial</p>
+                            </div>
+                            <span class="match-badge">88% Match</span>
+                        </div>
+                        <p class="description">Arquitete soluções escaláveis e seguras.</p>
+                        <div class="vaga-details">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">AWS</span>
+                        </div>
+                        <div class="vaga-meta">
+                            <span class="salary">R$ 10k - 16k</span>
+                            <span class="source">Vagas.com</span>
+                        </div>
+                        <div class="vaga-actions">
+                            <button class="btn-secondary">Ver Detalhes</button>
+                            <button class="btn-primary">Candidatar</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="beneficios-section" id="beneficios">
+            <div class="container">
+                <h2>✨ Por que JobFlow?</h2>
+                <ul class="beneficios-list">
+                    <li><h4>🎯 Economia de Tempo</h4><p>Uma plataforma, múltiplas oportunidades.</p></li>
+                    <li><h4>🚫 Sem Duplicatas</h4><p>Veja cada vaga apenas uma vez.</p></li>
+                    <li><h4>🔥 Relevância</h4><p>Apenas vagas que combinam com você.</p></li>
+                    <li><h4>⚡ Notificações</h4><p>Alertas em tempo real.</p></li>
+                    <li><h4>📊 Match %</h4><p>Saiba exatamente o fit.</p></li>
+                    <li><h4>🔐 Seguro</h4><p>Seus dados protegidos.</p></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 JobFlow. Desenvolvido com 💛</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
