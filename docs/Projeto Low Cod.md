@@ -145,6 +145,36 @@ Projeto desenvolvido para a disciplina de **Low Code / No Code** como exercício
 
 ## 👤 Autor
 
-**Kauan Santos**  
-Felipe Heleno
+**Kauan Santos** 
+**Felipe Heleno**
 Estudante de Análise e Desenvolvimento de Sistemas
+
+## 👥 Divisão da Equipe
+
+### Kauan Santos
+- Estrutura da automação no Make
+- Integração com Telegram Bot
+- Lógica de deduplicação
+- Integração com Remotive API
+
+### Felipe Heleno
+- Modelagem do Airtable
+- Desenvolvimento do painel no Softr
+- Documentação técnica
+- Pesquisa e análise crítica da solução
+
+- ## 🧠 Por que utilizar Low-Code / No-Code?
+
+A proposta da disciplina incentivava o desenvolvimento rápido de soluções funcionais utilizando ferramentas low-code/no-code.
+
+A abordagem escolhida permitiu:
+
+- Validar rapidamente a ideia do produto
+- Criar integrações reais sem infraestrutura própria
+- Automatizar fluxos complexos sem backend tradicional
+- Focar na lógica do sistema e experiência do usuário
+- Reduzir tempo de desenvolvimento
+
+O uso de plataformas como Make, Airtable e Softr demonstrou como ferramentas no-code podem ser utilizadas para construir MVPs funcionais e automatizações reais de mercado.
+
+Ao mesmo tempo, o projeto evidenciou limitações importantes relacionadas à escalabilidade, controle lógico e manutenção, justificando a futura migração para Node.js.
