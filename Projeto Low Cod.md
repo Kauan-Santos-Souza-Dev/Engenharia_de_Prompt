@@ -145,4 +145,5 @@ Projeto desenvolvido para a disciplina de **Low Code / No Code** como exercício
 ## 👤 Autor
 
 **Kauan Santos**  
+Felipe Heleno
 Estudante de Análise e Desenvolvimento de Sistemas
