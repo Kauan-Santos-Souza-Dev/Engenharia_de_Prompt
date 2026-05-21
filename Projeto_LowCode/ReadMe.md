@@ -96,7 +96,10 @@ Essa comparação prática entre a abordagem no-code e a abordagem em código fo
 
 ## 👥 Colaboração
 
-Projeto desenvolvido individualmente. As responsabilidades foram organizadas em fases sequenciais:
+**Kauan Santos Souza**
+**Felipe Heleno Albuquerque de Souza**
+
+As responsabilidades foram organizadas em fases sequenciais:
 
 - **Fase 1:** Definição do problema e escolha das ferramentas
 - **Fase 2:** Configuração da automação no Make (fluxo, filtros, scheduler)
