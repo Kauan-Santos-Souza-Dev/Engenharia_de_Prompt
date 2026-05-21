@@ -23,7 +23,6 @@ Todo dia o sistema executa automaticamente o seguinte ciclo:
 
 Interface com listagem de vagas em cards, barra de busca, tipo de contrato e região, e botão "Apply" redirecionando para a candidatura externa.
 
-> Coloque os arquivos de imagem ou PDF na pasta `/docs`.
 
 ---
 
