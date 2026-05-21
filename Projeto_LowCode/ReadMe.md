@@ -97,6 +97,7 @@ Essa comparação prática entre a abordagem no-code e a abordagem em código fo
 ## 👥 Colaboração
 
 **Kauan Santos Souza**
+
 **Felipe Heleno Albuquerque de Souza**
 
 As responsabilidades foram organizadas em fases sequenciais:
