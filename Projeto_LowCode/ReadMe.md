@@ -200,7 +200,7 @@ Ferramentas como Wix e Webflow são mais adequadas para sites institucionais est
 ## Telegram Bot API foi mantido como canal de notificação por já estar disponível gratuitamente, sem limite de mensagens no plano gratuito,
 e por ser o canal mais direto para entregar alertas em tempo real ao usuário sem exigir que ele acesse o painel web.
 
-# Reflexão Crítica
+# Reflexão Crítica Sobre as limitações encontradas
 
 ## **Vantagens**
 
@@ -220,3 +220,6 @@ e por ser o canal mais direto para entregar alertas em tempo real ao usuário se
 
 3. **Escalabilidade cara** — o plano gratuito do Make tem limite de operações por mês. Adicionar mais fontes de vagas, mais usuários ou mais execuções diárias rapidamente ultrapassa esse limite, gerando custo. Em Node.js rodando no próprio servidor isso tem custo zero.
 
+# Descrição do Aplicativo escolhido.
+
+O Project Scraper é um agregador automático de vagas de emprego remoto. O sistema consome a API pública da Remotive, filtra as vagas por critérios de localização para garantir que apenas oportunidades acessíveis a candidatos brasileiros sejam exibidas, elimina duplicatas comparando IDs com um banco de dados histórico, e entrega as vagas novas diariamente via notificação no Telegram e painel web. O produto resolve um problema real: acompanhar manualmente múltiplas plataformas de emprego todos os dias é ineficiente e sujeito a perder oportunidades por falta de tempo.
