@@ -12,7 +12,7 @@ Desenvolvimento de um agregador automático de vagas de emprego. O desafio consi
 
 Todo dia o sistema executa automaticamente o seguinte ciclo:
 
-1. Busca até 150 vagas remotas em uma API.
+1. Busca até 150 vagas.
 2. Para cada vaga, verifica se o campo de localização aceita candidatos brasileiros
 3. Consulta o banco de dados para verificar se a vaga já foi notificada anteriormente
 4. Se a vaga é nova, salva no banco de dados (Airtable)
@@ -86,9 +86,9 @@ As responsabilidades foram organizadas em fases sequenciais:
 
 - **Fase 1:** Definição do problema e escolha das ferramentas
 - **Fase 2:** Configuração da automação no Make.
-- **Fase 3:** Configuração do banco de dados no Airtable
-- **Fase 4:** Desenvolvimento do front-end no Softr e conexão com o Airtable
-- **Fase 5:** Testes, ajustes e documentação
+- **Fase 3:** Configuração do banco de dados no Airtable.
+- **Fase 4:** Desenvolvimento do front-end no Softr e conexão com o Airtable.
+- **Fase 5:** Testes, ajustes e documentação.
 
 ---
 
