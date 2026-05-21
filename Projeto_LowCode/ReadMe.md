@@ -1,4 +1,4 @@
-# 🚀 Project Scraper — Remote Job Board
+# 🚀 Project Scraper — Remote Job Board https://adell81726.softr.app/#tab1
 
 Agregador automático de vagas remotas com notificação via Telegram e painel web. Desenvolvido como projeto prático da disciplina de Low Code / No Code.
 
@@ -145,3 +145,39 @@ Projeto desenvolvido para a disciplina de **Low Code / No Code** como exercício
 **Kauan Santos**  
 **KFelipe Heleno**  
 Estudante de Análise e Desenvolvimento de Sistemas
+
+Link de Acesso
+https://adell81726.softr.app/#tab1
+
+## Reflexão Crítica
+
+Vantagens
+
+Velocidade de prototipagem — o ciclo completo (buscar API → filtrar → notificar → armazenar → exibir no painel) foi construído e validado em menos de um dia, sem escrever uma linha de código.
+
+Visualização do fluxo — cada etapa do sistema se torna um bloco visual, o que facilita entender a lógica antes de implementar em código. Funciona como pseudocódigo executável.
+
+Integração nativa entre ferramentas — Make, Airtable, Telegram e Softr se conectam diretamente sem precisar configurar servidores, autenticação complexa ou infraestrutura.
+
+Limitações
+
+Lógica customizada é limitada — deduplicação com campo primário do Airtable, digest consolidado no Telegram e mensagem de fallback são simples em código e complexos ou impossíveis no Make sem gambiarras.
+
+# Justificativa Técnica
+
+Justificativa Técnica da Escolha das Plataformas
+Make foi escolhido como motor de automação por ser a plataforma low-code com maior controle sobre fluxos de dados complexos dentre as avaliadas.
+Diferente do Zapier e do IFTTT, o Make permite iterar sobre arrays, aplicar filtros condicionais com múltiplas regras, encadear módulos com lógica de deduplicação e configurar schedulers com timezone explícito — funcionalidades essenciais para o funcionamento do Scraper.
+
+Airtable foi escolhido como banco de dados por oferecer integração nativa com o Make e com o Softr, eliminando a necessidade de configurar uma camada intermediária de API.
+Para o MVP, sua interface visual também facilita inspecionar os dados salvos e identificar problemas durante o desenvolvimento.
+
+Softr foi escolhido como plataforma de front-end por ser a única ferramenta da lista que conecta diretamente ao Airtable como fonte de dados e gera interfaces responsivas com componentes prontos para listagem, busca e filtragem — exatamente o que um painel de vagas exige.
+Ferramentas como Wix e Webflow são mais adequadas para sites institucionais estáticos e não oferecem essa integração dinâmica com banco de dados externo.
+
+Telegram Bot API foi mantido como canal de notificação por já estar disponível gratuitamente, sem limite de mensagens no plano gratuito,
+e por ser o canal mais direto para entregar alertas em tempo real ao usuário sem exigir que ele acesse o painel web.
+
+Debugging opaco — quando algo dá errado é difícil entender exatamente onde e por quê. Em Node.js você lê o erro, localiza a linha e corrige. No Make você testa bloco por bloco sem visibilidade real do que acontece por baixo.
+
+Escalabilidade cara — o plano gratuito do Make tem limite de operações por mês. Adicionar mais fontes de vagas, mais usuários ou mais execuções diárias rapidamente ultrapassa esse limite, gerando custo. Em Node.js rodando no próprio servidor isso tem custo zero.
