@@ -8,5 +8,5 @@ https://adell81726.softr.app/#tab1
 
 # Print do Fluxograma feito no make.
 
-<img width="1400" height="493" alt="Captura de tela 2026-05-07 170120" src="https://github.com/user-attachments/assets/652119b4-4db3-4fb4-a9fa-84078840817b" />
+<img width="1841" height="951" alt="Captura de tela 2026-05-09 120057" src="https://github.com/user-attachments/assets/0e68c3f3-6af6-4f0f-bc11-d7c194a585e5" />
 
